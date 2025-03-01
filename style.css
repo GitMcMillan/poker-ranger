@@ -1,7 +1,7 @@
 .header {
   text-align: center;
 
-  color: red;
+  color: rgb(97, 3, 3);
 }
 
 .body {
@@ -34,4 +34,7 @@
   font-size: 14px;
   font-weight: bold;
   background-color: whitesmoke;
+  /* background-color: rgb(247, 196, 196); */
+  /* background-color: rgb(212, 160, 17); */
+  /* background-color: rgb(150, 198, 237); */
 }

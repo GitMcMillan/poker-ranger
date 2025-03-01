@@ -1,0 +1,8 @@
+Checklist:
+
+1. Create a grid (done)
+2. populate the grid with the card combinations (done)
+3. set up an input fopr player position (done)
+4. set up an input for villain position (done)
+5. set up input for BB size (done)
+6. make cards colors changeable depending on fold/raise/call

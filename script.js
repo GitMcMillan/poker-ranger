@@ -180,12 +180,5 @@ hands.forEach((hand) => {
   cell.className = "cell";
   cell.textContent = hand;
   grid.appendChild(cell);
+  cell.id = cell.textContent;
 });
-
-// for (let i = 0; i < 169; i++) {
-//   const theDiv = document.createElement("div");
-//   theDiv.textContent = "AA";
-//   theDiv.className = "cell";
-
-//   grid.appendChild(theDiv);
-// }
