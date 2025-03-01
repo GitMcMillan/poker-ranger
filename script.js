@@ -214,10 +214,11 @@ console.log(cell1.getAttribute("hand"));
 function selectionCheck() {
   console.log(heroPosition, villainPosition);
 
-  const currentHero = heroPosition;
-  const currentVillain = villainPosition;
+  // const currentHero = heroPosition;
+  // const currentVillain = villainPosition;
+  // console.log(currentHero);
 
-  if (currentHero == "Big Blind" && currentVillain == "Small Blind") {
+  if (currentHero === "Big Blind") {
     console.log("Success");
   } else {
     console.log("Nope");
@@ -226,8 +227,18 @@ function selectionCheck() {
 
 cell1.addEventListener("click", selectionCheck);
 
-const herooo = document.getElementById("hero-position");
+const heroSelect = document.getElementById("hero-position");
 
-herooo.addEventListener("change", function () {
-  console.log("Position:", document.getElementById("hero-position").value);
+//need to put the event listenre change on the Villain position select as well.
+heroSelect.addEventListener("change", function () {
+  console.log(
+    "Position:",
+
+    document.getElementById("hero-position").value
+  );
+  heroPosition = hero.value;
+  villainPosition = villain.value;
+  if (heroPosition == "Big Blind" && villainPosition == "Small Blind") {
+    cell1.style.color = "blue";
+  }
 });
