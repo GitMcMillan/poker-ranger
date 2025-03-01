@@ -175,10 +175,59 @@ const hands = [
 const body = document.body;
 const grid = document.querySelector(".grid");
 
-hands.forEach((hand) => {
+const hero = document.getElementById("hero-position");
+let heroPosition = document.getElementById("hero-position").value;
+let villainPosition = document.getElementById("villain-position").value;
+const villain = document.getElementById("villain-position");
+const bb = document.getElementById("bb-size");
+const bbValue = document.getElementById("bb-size").value;
+
+hands.forEach((hand, index) => {
   const cell = document.createElement("div");
   cell.className = "cell";
   cell.textContent = hand;
   grid.appendChild(cell);
-  cell.id = cell.textContent;
+  cell.id = index + 1;
+  cell.setAttribute("hand", cell.textContent);
+});
+
+// if ((hero.value = "Button")) {
+//   console.log(hero.value);
+// }
+
+// if ((villain.value = "Button")) {
+//   console.log(villain.value);
+// }
+
+// if ((bb.value = 50)) {
+//   console.log(bb.value);
+// }
+// hero.value == "Button"
+
+// if (villain.value === "Big Blind") {
+//   console.log("Success");
+//   console.log(villain.value);
+// }
+const cell1 = document.getElementById(1);
+console.log(cell1.getAttribute("hand"));
+
+function selectionCheck() {
+  console.log(heroPosition, villainPosition);
+
+  const currentHero = heroPosition;
+  const currentVillain = villainPosition;
+
+  if (currentHero == "Big Blind" && currentVillain == "Small Blind") {
+    console.log("Success");
+  } else {
+    console.log("Nope");
+  }
+}
+
+cell1.addEventListener("click", selectionCheck);
+
+const herooo = document.getElementById("hero-position");
+
+herooo.addEventListener("change", function () {
+  console.log("Position:", document.getElementById("hero-position").value);
 });
