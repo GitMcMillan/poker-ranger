@@ -211,12 +211,15 @@ hands.forEach((hand, index) => {
 const cell1 = document.getElementById(1);
 console.log(cell1.getAttribute("hand"));
 
+let currentHero = "Select Position";
 function selectionCheck() {
   console.log(heroPosition, villainPosition);
 
   // const currentHero = heroPosition;
   // const currentVillain = villainPosition;
   // console.log(currentHero);
+
+  console.log(currentHero);
 
   if (currentHero === "Big Blind") {
     console.log("Success");
