@@ -211,15 +211,12 @@ hands.forEach((hand, index) => {
 const cell1 = document.getElementById(1);
 console.log(cell1.getAttribute("hand"));
 
-let currentHero = "Select Position";
 function selectionCheck() {
   console.log(heroPosition, villainPosition);
-
+  let currentHero = heroPosition;
   // const currentHero = heroPosition;
   // const currentVillain = villainPosition;
   // console.log(currentHero);
-
-  console.log(currentHero);
 
   if (currentHero === "Big Blind") {
     console.log("Success");
@@ -245,3 +242,9 @@ heroSelect.addEventListener("change", function () {
     cell1.style.color = "blue";
   }
 });
+
+/* changes to make
+- update values to change colors of the cells
+- work out a forumla for lowering the shaded cells based on player number
+gotta be an easier way to increase/decrease the cells without manually updating them for every value change
+*/
